@@ -1,0 +1,29 @@
+<!-- <div class="container">
+  <%= link_to '+ create a new cocktail', new_cocktail_path %>
+  <h1>Liste de nos Cocktails</h1>
+  <ul class='list-group'>
+    <% @cocktails.each do |cocktail| %>
+    <li class='list-group-item' >
+      <%= link_to cocktail_path(cocktail) do %>
+      <%= cocktail.name %></li>
+      <% end %>
+  <% end %>
+  </ul>
+</div> -->
+
+<div class="container">
+  <h1>Liste de nos Cocktails</h1>
+  <div class="d-flex justify-content-space-between">
+    <% @cocktails.each do |cocktail| %>
+    <div class="card" style="width: 18rem;">
+      <img src="https://cdn.pixabay.com/photo/2016/11/23/14/49/alcohol-1853327_1280.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to cocktail_path(cocktail) do %>
+        <%= cocktail.name %></li>
+        <% end %> </h5>
+        <%= link_to "Details", cocktail_path(cocktail), class: "btn btn-primary"%>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
