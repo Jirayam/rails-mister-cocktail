@@ -7,14 +7,14 @@
 </div>
 
 <div class="container">
-  <h1>Liste de nos Cocktails</h1>
-  <div class="d-flex justify-content-space-between">
+  <h1 class="text-center">Liste de tous les Bonjour Madame Cocktails</h1>
+  <div class="d-flex justify-content-space-between row">
     <% @cocktails.each do |cocktail| %>
-    <div class="card" style="width: 18rem;">
-      <img src="https://cdn.pixabay.com/photo/2016/11/23/14/49/alcohol-1853327_1280.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
+    <div class="card-index col-lg-4 col-md-4 col-sm-12">
+      <div class="card-body text-center p-10">
         <h5 class="card-title"><%= link_to cocktail_path(cocktail) do %>
         <%= cocktail.name %></li>
+          <%= cl_image_tag cocktail.photo, width: 150, crop: :fit %>
         <% end %> </h5>
         <%= link_to "Details", cocktail_path(cocktail), class: "btn btn-primary"%>
       </div>
