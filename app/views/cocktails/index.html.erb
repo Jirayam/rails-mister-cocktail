@@ -1,15 +1,10 @@
-<!-- <div class="container">
-  <%= link_to '+ create a new cocktail', new_cocktail_path %>
-  <h1>Liste de nos Cocktails</h1>
-  <ul class='list-group'>
-    <% @cocktails.each do |cocktail| %>
-    <li class='list-group-item' >
-      <%= link_to cocktail_path(cocktail) do %>
-      <%= cocktail.name %></li>
-      <% end %>
-  <% end %>
-  </ul>
-</div> -->
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.pixabay.com/photo/2019/09/26/12/59/cocktail-4505879_1280.jpg);">
+  <div class="container">
+    <h1>Bonjour Madame <strong>Cocktail</strong>!</h1>
+    <p>Le site des Madames avec des cocktails</p>
+    <%= link_to "Ajoute ton BMC", new_cocktail_path, class: "btn btn-gradient" %>
+  </div>
+</div>
 
 <div class="container">
   <h1>Liste de nos Cocktails</h1>
