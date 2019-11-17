@@ -1,5 +1,16 @@
 .card-index {
-  width: 150px;
-  background: $light-blue;
-  box-shadow: 0 0 15px $light-gray;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.card-index h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: $white;
+
 }

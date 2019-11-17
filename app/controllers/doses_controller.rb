@@ -10,7 +10,7 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(@cocktail), notice: 'Dose was successfully created.'
     else
-      render :new
+      render "cocktail/show"
     end
   end
 
