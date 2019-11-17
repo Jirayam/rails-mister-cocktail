@@ -21,6 +21,10 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def self.destroy_all
+    Cocktail.all.each { |cocktail| cocktail.destroy }
+  end
+
   private
 
   def cocktail_params
